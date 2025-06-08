@@ -3,6 +3,7 @@
 # This script creates u-boot FIT image containing the kernel and the DT.
 
 MKIMAGE=$HOST_DIR/bin/mkimage
+GENIMAGE=$HOST_DIR/bin/genimage
 BOARD_DIR="$(dirname $0)"
 
 # Copy ITS to binaries dir
@@ -16,7 +17,7 @@ GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 
 rm -rf "${GENIMAGE_TMP}"
 
-genimage \
+$GENIMAGE \
   --rootpath "${TARGET_DIR}" \
   --tmppath "${GENIMAGE_TMP}" \
   --inputpath "${BINARIES_DIR}" \
