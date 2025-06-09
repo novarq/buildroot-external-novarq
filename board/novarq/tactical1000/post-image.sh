@@ -27,3 +27,5 @@ $GENIMAGE \
 gzip -9 -k -f $BINARIES_DIR/nor-atf.gpt
 gzip -9 -k -f $BINARIES_DIR/mmc-full.gpt
 gzip -9 -k -f $BINARIES_DIR/mmc-atf.gpt
+
+tar -C ${TARGET_DIR}/lib -czf $BINARIES_DIR/kernel-modules.tar.gz modules
