@@ -25,6 +25,7 @@ $GENIMAGE \
   --config "${GENIMAGE_CFG}"
 
 gzip -9 -k -f $BINARIES_DIR/nor-atf.gpt
+gzip -9 -k -f $BINARIES_DIR/nor-atf.img
 gzip -9 -k -f $BINARIES_DIR/mmc-full.gpt
 gzip -9 -k -f $BINARIES_DIR/mmc-atf.gpt
 
