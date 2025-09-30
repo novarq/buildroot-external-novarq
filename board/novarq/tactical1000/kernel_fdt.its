@@ -27,7 +27,7 @@
 		};
 		fdt-1 {
 			description = "Flattened Device Tree blob";
-			data = /incbin/("lan969x_tactical-1000-v2.dtb");
+			data = /incbin/("lan969x-tactical-1000-v2.dtb");
 			type = "flat_dt";
 			arch = "arm64";
 			compression = "none";
