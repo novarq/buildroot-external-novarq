@@ -1,0 +1,4 @@
+config BR2_PACKAGE_MSCC_OTP
+	bool "mscc-otp"
+	help
+	  OTP userspace application

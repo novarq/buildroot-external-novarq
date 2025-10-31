@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_Novarq_PATH/package/mscc-otp/Config.in"
