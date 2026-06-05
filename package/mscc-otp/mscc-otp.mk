@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-MSCC_OTP_VERSION = 2025.09
+MSCC_OTP_VERSION = 2026.03
 MSCC_OTP_SITE = https://github.com/novarq/mscc-otp.git
 MSCC_OTP_SITE_METHOD = git
 MSCC_OTP_INSTALL_STAGING = YES
