@@ -1,5 +1,5 @@
 /*
- * Simple U-Boot uImage source file containing a single kernel and FDT blob
+ * U-Boot FIT image containing a kernel, FDT, and optional PoE overlay
  */
 
 /dts-v1/;
@@ -38,6 +38,19 @@
 				algo = "sha1";
 			};
 		};
+		fdt-poe {
+			description = "Tactical 1000 PoE overlay";
+			data = /incbin/("lan9696-tactical-1000-poe.dtbo");
+			type = "flat_dt";
+			arch = "arm64";
+			compression = "none";
+			hash-1 {
+				algo = "crc32";
+			};
+			hash-2 {
+				algo = "sha1";
+			};
+		};
 	};
 
 	configurations {
@@ -46,6 +59,11 @@
 			description = "Boot Linux kernel with FDT blob";
 			kernel = "kernel";
 			fdt = "fdt-1";
+		};
+		conf-poe {
+			description = "Boot Linux kernel with PoE overlay";
+			kernel = "kernel";
+			fdt = "fdt-1", "fdt-poe";
 		};
 	};
 };
